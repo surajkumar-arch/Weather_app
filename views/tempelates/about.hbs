@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Suraj Kumar Jaiswal</title>
+    <script src="JS/JS/app.js"></script>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --accent-color: #ff006e;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 400;
+        }
+
+        .personal-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: 5px;
+        }
+
+        .info-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-section, .interests-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .skills-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            border-radius: 10px;
+            background-color: var(--primary-color);
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Tabs */
+        .tab-section {
+            margin: 2rem 0;
+        }
+
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .tab-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 1rem;
+            background: white;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in">
+            <div class="profile-header">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1785de74-2e49-4434-8f8a-942a348bca21.png" alt="Futuristic robot avatar with glowing blue eyes and silver metallic surface, digital illustration style" class="avatar">
+                <h1>Suraj Kumar Jaiswal</h1>
+                <h2>Web Developer & Technology Enthusiast</h2>
+            </div>
+        </header>
+
+        <section class="personal-info fade-in delay-1">
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Personal Details</h3>
+                    <p><strong>Age:</strong> 20 years</p>
+                    <p><strong>Location:</strong> India</p>
+                </div>
+                <div class="info-item">
+                    <h3>Contact</h3>
+                    <p><strong>Email:</strong> suraj@example.com</p>
+                    <p><strong>Phone:</strong> +91 9876543210</p>
+                </div>
+                <div class="info-item">
+                    <h3>Social Media</h3>
+                    <p><strong>LinkedIn:</strong> linkedin.com/in/suraj</p>
+                    <p><strong>GitHub:</strong> github.com/suraj</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-section fade-in delay-2">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab(event, 'about')">About</button>
+                <button class="tab-btn" onclick="openTab(event, 'skills')">Skills</button>
+                <button class="tab-btn" onclick="openTab(event, 'interests')">Interests</button>
+            </div>
+
+            <div id="about" class="tab-content active">
+                <h3 class="section-title">About Me</h3>
+                <p>Hello! I'm Suraj Kumar Jaiswal, a passionate young professional exploring the world of technology. At just 20 years old, I'm driven by curiosity and a desire to create innovative solutions.</p>
+                <p>My journey in tech began when I wrote my first "Hello World" program, and since then I've been fascinated by how technology can transform ideas into reality. I'm constantly learning new skills and expanding my knowledge in software development.</p>
+            </div>
+
+            <div id="skills" class="tab-content">
+                <h3 class="section-title">My Skills</h3>
+                <div class="skills-container">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">UI/UX Design</div>
+                    <div class="skill">Problem Solving</div>
+                </div>
+            </div>
+
+            <div id="interests" class="tab-content">
+                <h3 class="section-title">My Interests</h3>
+                <p>Beyond coding, I'm interested in artificial intelligence, robotics, and emerging technologies. I enjoy attending tech meetups and hackathons to collaborate with like-minded individuals.</p>
+                <p>In my free time, you might find me reading tech blogs, watching sci-fi movies, or experimenting with new programming frameworks. I'm also passionate about teaching and often volunteer to help others learn to code.</p>
+            </div>
+        </section>
+
+        <footer class="fade-in delay-3">
+            <p>© 2023 Suraj Kumar Jaiswal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            const tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        
+
+        progressBars.forEach(bar => {
+            observer.observe(bar);
+        });
+
+        // Small animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.fade-in');
+            items.forEach(item => {
+                item.style.opacity = 0;
+            });
+        });
+
+        // After page load, show elements one by one
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const items = document.querySelectorAll('.fade-in');
+                items.forEach(item => {
+                    item.style.opacity = 1;
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+
+```

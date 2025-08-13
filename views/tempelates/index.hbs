@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="JS/JS/app.js"></script>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?weather,sky');
+            background-size: cover;
+            background-position: center;
+            color: var(--dark-color);
+            line-height: 1.6;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 400px;
+        }
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            padding: 0.5rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            width: 70%;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--secondary-color);
+        }
+
+        .search-button {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            margin-top: 2rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .search-input {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <p>Your go-to app for real-time weather updates!</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Enter your location..." id="locationInput">
+            <button class="search-button" onclick="getWeather()">Get Weather</button>
+        </div>
+
+        <footer>
+            <a href="index.html">Home</a> |
+            <a href="help.html">Help & Support</a> |
+            <p>© 2023 Suraj Kumar Jaiswal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function getWeather() {
+            const location = document.getElementById('locationInput').value;
+            if (location) {
+                // Here you can add the logic to fetch weather data based on the location
+                alert(`Fetching weather for ${location}...`);
+            } else {
+                alert('Please enter a location.');
+            }
+        }
+    </script>
+</body>
+</html>
+```
+
